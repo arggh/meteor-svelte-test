@@ -1,0 +1,33 @@
+<div class="main">
+  <h1>I'm Meteor and I...</h1>
+  <Message text="{message}" />
+</div>
+
+<style>
+  .main {
+    padding: 200px 0;
+    text-align: center;
+    background-color: #eee;
+  }
+
+  h1 {
+    color: indianred;
+    font-size: 24px;
+  }
+</style>
+
+<script>
+  import Message from './Message.html';
+
+  export default {
+    data() {
+      return {
+        message: '♥️ Svelte'
+      };
+    },
+
+    components: {
+      Message
+    }
+  };
+</script>

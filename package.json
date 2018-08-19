@@ -1,0 +1,35 @@
+{
+  "name": "meteor-svelte",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "debug": "meteor run --inspect",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-rc.1",
+    "meteor-node-stubs": "^0.4.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "svelte:compiler": {
+    "hydratable": true,
+    "css": false
+  },
+  "postcss": {
+    "map": true,
+    "plugins": {
+      "precss": {}
+    }
+  },
+  "devDependencies": {
+    "precss": "^3.1.2"
+  }
+}
